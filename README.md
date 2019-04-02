@@ -37,7 +37,7 @@ For the target domain, one can download from http://cvml.ist.ac.at/AwA2/. The li
 
 http://cvml.ist.ac.at/AwA2/AwA2-data.zip  
 
-`Note that we do not have the rights of the shared images. Please do not use our dataset for commercial purpose.`
+NOTE THAT WE DO NOT HAVE THE RIGHTS FOR THE SHARED IMAGES. PLEASE DO NOT USE OUR DATASET FOR COMMERCIAL PURPOSE.  
 
 We recommend that I2AwA can be used for traditional domain adaptation.
 
