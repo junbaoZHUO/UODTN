@@ -1,4 +1,4 @@
-code for UODTN
+# Codes for UODTN
 
 We implement our experiments with PyTorch 1.0.
 
@@ -9,7 +9,7 @@ cd GCN/materials/AWA2
 Download: http://nlp.stanford.edu/data/glove.6B.zip
 Unzip it, find and put glove.6B.300d.txt here.
 
-### constrcut graph:
+### Constrcut graph:
 python make_graph_animal_step1.py
 python make_graph_animal_step2.py
 Result in animals_graph_all.json, the graph for AwA2 which contains 255 nodes.
