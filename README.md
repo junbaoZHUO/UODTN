@@ -44,7 +44,6 @@ Train a GCN:
 
 ```
 cd GCN  
-
 python train_gcn_basic_awa_ezhuo_2019.py  
 python extract_50_cls_from_all_graph_for_awa.py  
 ```
