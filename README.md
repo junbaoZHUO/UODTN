@@ -10,7 +10,7 @@ cd GCN/materials/AWA2
 Download: http://nlp.stanford.edu/data/glove.6B.zip  
 Unzip it, find and put glove.6B.300d.txt here.
 
-### Constrcut graph:
+### Construct graph:
 ```
 python make_graph_animal_step1.py  
 python make_graph_animal_step2.py  
@@ -29,11 +29,17 @@ Result in 151_cls_from_1K.
 ## Step 2 Prepare data
 
 We upload the source domain of I2AwA :  
-https://drive.google.com/file/d/1GdDZ1SvEqGin_zeCAGaJn0821vC_PJmc/view?usp=sharing
+https://drive.google.com/file/d/1GdDZ1SvEqGin_zeCAGaJn0821vC_PJmc/view?usp=sharing  
+Or  
+https://pan.baidu.com/s/122-cvnjhYb0mB1zf4nShdA with password: ibee  
 
 For the target domain, one can download from http://cvml.ist.ac.at/AwA2/. The link is as follow:
 
-http://cvml.ist.ac.at/AwA2/AwA2-data.zip 
+http://cvml.ist.ac.at/AwA2/AwA2-data.zip  
+
+`Note that we do not have the rights of the shared images. Please do not use our dataset for commercial purpose.`
+
+We recommend that I2AwA can be used for traditional domain adaptation.
 
 ## Step 3 Train classifier on source domain
 
