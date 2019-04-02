@@ -20,10 +20,9 @@ def guassian_kernel(source, target, kernel_mul=2.0, kernel_num=5, fix_sigma=None
     else:
         bandwidth = torch.sum(L2_distance.data) / (n_samples**2-n_samples)
     bandwidth /= kernel_mul ** (kernel_num // 2)
-    # bandwidth_list = [1e-4, 1e-3, 1e-2, 1e-1, 1, 5, 10, 15, 20, 25, 30, 35, 100, 1000]
     bandwidth_list = [bandwidth * (kernel_mul**i) for i in range(kernel_num)]
     kernel_val = [torch.exp(-L2_distance / bandwidth_temp) for bandwidth_temp in bandwidth_list]
-    return sum(kernel_val)#/len(kernel_val)
+    return sum(kernel_val)
 
 
 def MK_MMD(source, target, kernel_mul=2.0, kernel_num=8, fix_sigma=None):
@@ -37,7 +36,6 @@ def MK_MMD(source, target, kernel_mul=2.0, kernel_num=8, fix_sigma=None):
         loss += kernels[s1, s2] + kernels[t1, t2]
         loss -= kernels[s1, t2] + kernels[s2, t1]
     return loss / float(batch_size)
-    # return torch.clamp(loss / float(batch_size), 0., 1000)
 
 
 def JAN(source_list, target_list, kernel_muls=[2.0, 2.0], kernel_nums=[5, 1], fix_sigma_list=[None, 1.68]):
@@ -67,7 +65,6 @@ def JAN(source_list, target_list, kernel_muls=[2.0, 2.0], kernel_nums=[5, 1], fi
 
 
 def L1N(source, target, WEIGHT=None, if_weight=False):
-    # print(WEIGHT.data.shape)
     if not if_weight:
         L1 = torch.mean(torch.sum(torch.abs(source - target), dim=1))
         L_s = torch.mean(torch.sum(torch.abs(source), dim=1)) 
@@ -89,6 +86,5 @@ def Matching_MMD(source, target, WEIGHT, if_weight=False):
     source_matched = torch.masked_select(source, Mask).view(-1, 2048)
     target_matched = torch.masked_select(target, Mask).view(-1, 2048)
     return MK_MMD(source_matched, target_matched)
-    # return MK_MMD(source_matched, target_matched.index_select(0, torch.randperm(list(source_matched.shape)[0]).cuda()))
 
 loss_dict = {"MMD":MK_MMD, "JAN":JAN, "L1N":L1N, "LP":LP, "Matching-MMD":Matching_MMD}

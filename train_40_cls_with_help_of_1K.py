@@ -94,7 +94,6 @@ def train_classification(config):
             weight_bias2    = torch.cat((classifier_layer2.weight.data,classifier_layer2.bias.data.unsqueeze(1)),dim=1)  
             torch.save(base_network.state_dict(),osp.join('save',args.save_name,'base_net%d.pkl'%(i+1)))
             torch.save({'fc151+16_ft':torch.cat((weight_bias, weight_bias2.cpu()),dim=0)},'151+16_cls_from_1K_ft')
-            # torch.save(classifier_layer2.state_dict(),osp.join('save',args.save_name,'class%d.pkl'%(i+1)))
 
         classifier_layer1.train(True)
         classifier_layer2.train(True)
