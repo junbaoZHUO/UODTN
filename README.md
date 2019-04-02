@@ -43,14 +43,14 @@ We recommend that I2AwA can be used for traditional domain adaptation.
 
 ## Step 3 Train classifier on source domain
 
-We find that directly finetune a classifier on source domain and then transfer 40 known classifier to unkown category via GCN resulting very poor results. The reason may be in that only 40 known classifier to train GCN is not sufficient. Therefore, we utilize 127+24 classifier pretrained on ImageNet-1K to train GCN. Specifically, 24 indicates that the classifiers are in source domain while the other 127 classifiers are not in target domain but are included in the constructed graph for target domain. We need to train the missing 16 classisifers for source domain. However, the classifiers pretrained on ImageNet-1K is discpreant from source domain. Thus, we fix the 24 classifiers and train 16 classifiers on source domain. Then we use these 127+24+16 classifiers to train GCN and obtain the initail classifiers for unknown categories.  
+We find that directly finetune classifiers on source domain and then transfer 40 known classifiers to unknown categories via GCN resulting very poor results. The reason may be in that using only 40 known classifiers as supervision information to train GCN is insufficient. Therefore, we utilize 127+24 classifiers pretrained on ImageNet-1K to train GCN. Specifically, 24 indicates that the classifiers are in source domain while the other 127 classifiers are not in target domain but are included in the constructed graph for target domain. We need to train the missing 16 classifiers for source domain. However, the classifiers pretrained on ImageNet-1K is discrepant from source domain. Thus, we fix the 24 classifiers and train 16 classifiers on source domain. Then we use these 127+24+16 classifiers to train GCN and obtain the initail classifiers for unknown categories.  
 
 ```
 cd UODTN  
 python train_40_cls_with_help_of_1K.py  
 ```
 
-Result in 151+16_cls_from_1K_ft and base_net_pretrained_on_I2AwA2_source_onl. 151+16_cls_from_1K_ft includes the original 127+24 classifiers and the additional 16 classifiers finetune from the source domain. base_net_pretrained_on_I2AwA2_source_onl is a trained feature extractor for I2AwA.  
+Result in 151+16_cls_from_1K_ft and base_net_pretrained_on_I2AwA2_source_only. 151+16_cls_from_1K_ft includes the original 127+24 classifiers and the additional 16 classifiers finetuned from the source domain. base_net_pretrained_on_I2AwA2_source_only is a trained feature extractor for I2AwA.  
 
 ## Step 4 Train UODTN
 
@@ -62,7 +62,7 @@ python train_gcn_basic_awa_ezhuo_2019.py
 python extract_50_cls_from_all_graph_for_awa.py  
 ```
 
-Result in awa_50_cls_basic, which is 50 classifiers for AwA2.  
+Result in awa_50_cls_basic, which contains 50 initial classifiers for AwA2.  
 
 ### Prepare matching:
 
