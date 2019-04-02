@@ -2,7 +2,7 @@ code for UODTN
 
 We implement our experiments with PyTorch 1.0.
 
-Step 1 Generate graph for AwA
+#Step 1 Generate graph for AwA
 
 cd GCN/materials/AWA2 
 
