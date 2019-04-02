@@ -61,8 +61,8 @@ def train_classification(config):
     transfer_criterion = loss.loss_dict["MMD"]
 
     ## prepare data
-    TRAIN_LIST = 'data/WEB_3D3_2.txt'#'AWA_SS.txt#'data/new_AwA2_common.txt'
-    TEST_LIST = 'data/new_AwA2_common.txt'#AWA_T.txt'#'data/WEB_72.txt'
+    TRAIN_LIST = 'data/WEB_3D3_2.txt'
+    TEST_LIST = 'data/new_AwA2_common.txt'
     BSZ = args.batch_size
 
     dsets_train1 = ImageList(open(TRAIN_LIST).readlines(), shape = (args.img_size,args.img_size), transform=prep_train, train=False)
@@ -147,14 +147,11 @@ def train_classification(config):
 
         cls_loss = class_criterion(outputs_source1, labels_source)
         
-        outputs_softmax = F.softmax(outputs_target1, dim=1)
-        WEIGHT = torch.sum(torch.softmax(outputs_source1, dim=1) * outputs_softmax, 1)# - 0.2
-
-        transfer_loss = transfer_criterion(features_source, features_target)#, WEIGHT.gt(0.6).float(), True)
+        transfer_loss = transfer_criterion(features_source, features_target)
         
 
 
-        total_loss = cls_loss + transfer_loss * args.w_align #+ torch.mean(entropy) * 0.0+ min_loss* args.w_min
+        total_loss = cls_loss + transfer_loss * args.w_align 
         print("Step "+str(i)+": cls_loss: "+str(cls_loss.cpu().data.numpy())+
                              " transfer_loss: "+str(transfer_loss.cpu().data.numpy()))
 
