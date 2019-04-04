@@ -1,6 +1,6 @@
 # Codes for UODTN
 
-We implement our experiments with python 3.6, numpy 1.15, PyTorch 1.0.
+We implement our experiments with python 3.6, numpy 1.15 and PyTorch 1.0.
 
 ## Step 1 Generate graph for AwA
 ```
