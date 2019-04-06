@@ -76,7 +76,7 @@ python match_5_split.py
 ### Train UODTN:
  
 ```
-python baseline_align_ezhuo_2019.py  
+python train_UODTN.py  
 ```
 
 
