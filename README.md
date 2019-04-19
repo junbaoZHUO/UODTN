@@ -78,6 +78,7 @@ python match_5_split.py
 ```
 python train_UODTN.py  
 ```
-
-
+### Citation
+Please cite our paper:  
+Junbao Zhuo, Shuhui Wang, Shuhan Cui, and Qingming Huang. Unsupervised Open Domain Recognition by Semantic Discrepancy Minimization. arXiv preprint a	arXiv:1904.08631, 2019.  
 Acknowledgements: Our codes are mainly based on https://github.com/cyvius96/adgpm and https://github.com/thuml/Xlearn/tree/master/pytorch
