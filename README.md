@@ -1,7 +1,7 @@
 # Codes for UODTN
 
 We implement our experiments with python 3.6, numpy 1.15 and PyTorch 1.0.
-
+![alt text](https://raw.githubusercontent.com/junbaoZHUO/UODTN/master/framework5.png)
 ## Step 1 Generate graph for AwA
 ```
 cd GCN/materials/AWA2 
