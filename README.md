@@ -80,12 +80,12 @@ python train_UODTN.py
 ```
 ### Citation
 Please cite our paper:  
-@inproceedings{zhuo2019unsupervised,
-  title={Unsupervised Open Domain Recognition by Semantic Discrepancy Minimization},
-  author={Zhuo, Junbao and Wang, Shuhui and Cui, Shuhao and Huang, Qingming},
-  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
-  pages={750--759},
-  year={2019}
+@inproceedings{zhuo2019unsupervised,  
+  title={Unsupervised Open Domain Recognition by Semantic Discrepancy Minimization},  
+  author={Zhuo, Junbao and Wang, Shuhui and Cui, Shuhao and Huang, Qingming},  
+  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},  
+  pages={750--759},  
+  year={2019}  
 }  
   
 Acknowledgements: Our codes are mainly based on https://github.com/cyvius96/adgpm and https://github.com/thuml/Xlearn/tree/master/pytorch
