@@ -168,7 +168,7 @@ def train_classification(config):
     class_criterion = nn.CrossEntropyLoss()
 
     ## prepare data
-    TRAIN_LIST = 'data/I2AWA2_40.txt'#'AWA_SS.txt#'data/new_AwA2_common.txt'
+    TRAIN_LIST = 'data/I2AWA2.txt'#'AWA_SS.txt#'data/new_AwA2_common.txt'
     TEST_LIST = 'data/new_AwA2.txt'
     BSZ = args.batch_size
 

@@ -1,4 +1,5 @@
-# Codes for UODTN
+# UODTN
+Code release for ["Unsupervised Open Domain Recognition by Semantic Discrepancy Minimization"](http://openaccess.thecvf.com/content_CVPR_2019/papers/Zhuo_Unsupervised_Open_Domain_Recognition_by_Semantic_Discrepancy_Minimization_CVPR_2019_paper.pdf) (CVPR 2019)
 
 We implement our experiments with python 3.6, numpy 1.15 and PyTorch 1.0.
 ![alt text](https://raw.githubusercontent.com/junbaoZHUO/UODTN/master/framework5.png)
