@@ -51,7 +51,7 @@ cd UODTN
 python train_40_cls_with_help_of_1K.py  
 ```
 
-Result in 151+16_cls_from_1K_ft and base_net_pretrained_on_I2AwA2_source_only. 151+16_cls_from_1K_ft includes the original 127+24 classifiers and the additional 16 classifiers finetuned from the source domain. base_net_pretrained_on_I2AwA2_source_only is a trained feature extractor for I2AwA.  
+Result in 151+16_cls_from_1K_ft and base_net_pretrained_on_I2AwA2_source_only. 151+16_cls_from_1K_ft includes the original 127+24 classifiers and the additional 16 classifiers finetuned from the source domain. ["base_net_pretrained_on_I2AwA2_source_only"](https://drive.google.com/file/d/1FiHB8HV8U2Isfx0A6ipWEIaE4q-sekoO/view?usp=sharing) is a trained feature extractor for I2AwA.  
 
 ## Step 4 Train UODTN
 
@@ -63,7 +63,7 @@ python train_gcn_basic_awa_ezhuo_2019.py
 python extract_50_cls_from_all_graph_for_awa.py  
 ```
 
-Result in awa_50_cls_basic, which contains 50 initial classifiers for AwA2.  
+Result in ["awa_50_cls_basic"](https://drive.google.com/file/d/1PD7Gm7OBxJLub8YNiELxLKq9WruSAAVH/view?usp=sharing), which contains 50 initial classifiers for AwA2.  
 
 ### Prepare matching:
 
