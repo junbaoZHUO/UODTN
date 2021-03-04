@@ -63,7 +63,7 @@ python train_gcn_basic_awa_ezhuo_2019.py
 python extract_50_cls_from_all_graph_for_awa.py  
 ```
 
-Result in ["awa_50_cls_basic"](https://drive.google.com/file/d/1PD7Gm7OBxJLub8YNiELxLKq9WruSAAVH/view?usp=sharing), which contains 50 initial classifiers for AwA2.  
+Result in ["awa_50_cls_basic"](https://drive.google.com/file/d/1DLeCpM7-k1xBianFEmc3L6c9526WEha4/view?usp=sharing), which contains 50 initial classifiers for AwA2.  
 
 ### Prepare matching:
 
